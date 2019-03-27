@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module Ruboty
   module Github
     module Actions
@@ -38,9 +39,7 @@ module Ruboty
           updated_sha1 = sha1.slice(0, 8)
 
           <<~LINKS
-            Updated #{ref} to https://github.com/#{repository}/commits/#{updated_sha1}
-              diff from previous: https://github.com/#{repository}/compare/#{current_sha1}..#{updated_sha1}
-              diff from master: https://github.com/#{repository}/compare/#{master_sha1}..#{updated_sha1}
+            #{ref}ブランチを更新したよ
           LINKS
         end
 
